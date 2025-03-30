@@ -12,7 +12,9 @@
     "@fontsource-variable/onest": "^5.2.7",
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/vite": "^4.0.17",
-    "astro": "^5.5.5"
+    "astro": "^5.5.5",
+    "astro-navbar": "^2.3.9",
+    "i18next": "^24.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

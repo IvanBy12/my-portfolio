@@ -1,49 +1,41 @@
 ---
-import "@fontsource-variable/onest"
-import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
+import Header from "../components/header/Header.astro";
 import Footer from "../components/Footer.astro";
+
 import { ViewTransitions } from "astro:transitions";
 
-
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string; // La prop description está definida aquí
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 
-import '../styles/global.css';
-
+import "../styles/global.css";
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Astro description" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href=/styles/global.css" />
-		<title>{title}</title>
-		<ViewTransitions />
-		
-		<body class="relative text-black dark:text-white">
-			<div
-			  class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-			  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-			  dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-			>
-			</div>
-			<Header />
-			<slot />
-			<Footer />
-		</body>
-		
-		<style>
-	
-		</style>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} /> <!-- Usa la prop description aquí -->
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="relative text-black dark:text-white">
+    <div
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>

@@ -1,0 +1,46 @@
+---
+import MenuIcon from "./icons/Menuicon.astro";
+import CloseIcon from "./icons/ChoseIcon.astro";
+import ThemeToggle from "../buttons/ThemeButton.astro";
+
+import { t } from "i18next";
+---
+
+<header class="flex justify-center items-center">
+    <div class="menu-container flex justify-center w-100 relative">
+        <input
+      type="checkbox"
+      id="nav_checkbox"
+      aria-label="Open menu mobile"
+      name="nav_checkbox"
+    />
+    <label for="nav_checkbox" class="nav_toggle" aria-labelledby="nav_checkbox">.
+        <MenuIcon class="open" />
+        <CloseIcon class="close" />
+    </label>
+
+    <div class="menu_wrap">
+        <nav class="nav_menu flex flex-row">
+          <!-- Logo name '> Ivan Patiño _' -->
+          <a
+            class="flex logo justify-between items-center gap-2 font-bold text-nowrap text-[--primary-color] opacity-100 z-[10]"
+            href="#home"
+          >
+            <span class="text-[--color-violet-one]">&#62;</span> Ivan Patiño
+            <span class="text-[--color-violet-one]">&#95;</span>
+          </a>
+          <div class="nav_links absolute flex justify-center right-0 gap-x-10 w-full h-full items-center">
+            <a href="#about-me" data-nav-checkbox>{t("NAVBAR.ABOUT_ME")}</a>
+            <a href="#experience" data-nav-checkbox>{t("NAVBAR.EXPERIENCE")}</a>
+            <a href="#projects" data-nav-checkbox>{t("NAVBAR.PROJECTS")}</a>
+            <a href="#contact" data-nav-checkbox>{t("NAVBAR.CONTACT")}</a>
+
+            <div class="toogles absolute flex gap-x-5">
+                <ThemeToggle />
+
+            </div>
+          </div>
+     <div>
+
+
+</header>
