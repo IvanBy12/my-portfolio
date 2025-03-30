@@ -13,8 +13,10 @@
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/vite": "^4.0.17",
     "astro": "^5.5.5",
+    "astro-i18next": "^1.0.0-beta.21",
     "astro-navbar": "^2.3.9",
-    "i18next": "^24.2.3"
+    "i18next": "^24.2.3",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
