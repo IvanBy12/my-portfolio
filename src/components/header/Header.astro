@@ -8,18 +8,19 @@ import CloseIcon from "./icons/ChoseIcon.astro";
 <header class="header flex justify-center items-center">
   <div class="menu-container flex justify-center items-center w-100 relative">
     <div class="menu_wrap">
-      <nav class="nav_menu flex flex-row">
+      <nav class="nav_menu flex flex-row" id="logo">
         <a
           class="flex logo justify-between items-center gap-2 font-bold text-nowrap text-[--primary-color]"
-          href="#home"
+          href="#home" data-nav-checkbox
         >
-          <span class="text-[--color-violet-one]">&#62;</span> Ivan Patiño
-          <span class="text-[--color-violet-one]">&#95;</span>
+          <span class="text-[#8332ff]\">&#62;</span> Ivan Patiño
+          <span class="text-[#8332ff]\">&#95;</span>
         </a>
 
         <div 
         class="nav_links absolute flex justify-center right-0 gap-x-10 w-full h-full items-center"
-        > <a href="#about" data-nav-checkbox>About</a>
+        > <a href="home" data-nav-checkbox class="logo"> </a>
+          <a href="#about" data-nav-checkbox>About</a>
           <a href="#projects" data-nav-checkbox>Projects</a>
           <a href="#contact" data-nav-checkbox>Contact</a>
         </div>
