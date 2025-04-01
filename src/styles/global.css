@@ -20,12 +20,6 @@ body {
     overscroll-behavior: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: rgba(255, 255, 255, 0.9);
-    }
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -64,17 +58,5 @@ body {
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
-}
-
-.nav_toggle {
-    display: none;
-}
-
-.toogles {
-    right: 5%;
-}
-
-.logo {
-    font-size: var(--font-size-logo-nav);
 }
 
