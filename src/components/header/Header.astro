@@ -1,228 +1,34 @@
 ---
 import MenuIcon from "./icons/Menuicon.astro";
 import CloseIcon from "./icons/ChoseIcon.astro";
-import ThemeToggle from "../buttons/ThemeButton.astro";
 
 
-import { t } from "i18next";
 ---
-<header class="flex justify-center items-center">
-    <div class="menu-container flex justify-center items-center w-100 relative">
 
-      <input
-        type="checkbox"
-        id="nav_checkbox"
-        aria-label="Open menu mobile"
-        name="nav_checkbox"
-      />
-      <label for="nav_checkbox" class="nav_toggle" aria-labelledby="nav_checkbox"
-        >.
-        <MenuIcon class="open" />
-        <CloseIcon class="close" />
-      </label>
-      <div class="menu_wrap">
-        <nav class="nav_menu flex flex-row">
-       
-          <a
-            class="flex logo justify-between items-center gap-2 font-bold text-nowrap text-[--primary-color] opacity-100 z-[10]"
-            href="#home"
-          >
-            <span class="text-[--color-violet-one]">&#62;</span> Ivan Patiño
-            <span class="text-[--color-violet-one]">&#95;</span>
-          </a>
-  
-          <div
-            class="nav_links flex justify-center gap-x-8 items-center"
-          >
-            <a href="#about-me" data-nav-checkbox>{t("NAVBAR.ABOUT_ME")}</a>
-            <a href="#experience" data-nav-checkbox>{t("NAVBAR.EXPERIENCE")}</a>
-            <a href="#projects" data-nav-checkbox>{t("NAVBAR.PROJECTS")}</a>
-            <a href="#contact" data-nav-checkbox>{t("NAVBAR.CONTACT")}</a>
-        
-            <div class="toogles flex gap-x-5">
-              <ThemeToggle />
-            </div>
-          </div>
-        </nav>
-      </div>
+<header class="header flex justify-center items-center">
+  <div class="menu-container flex justify-center items-center w-100 relative">
+    <div class="menu_wrap">
+      <nav class="nav_menu flex flex-row">
+        <a
+          class="flex logo justify-between items-center gap-2 font-bold text-nowrap text-[--primary-color]"
+          href="#home"
+        >
+          <span class="text-[--color-violet-one]">&#62;</span> Ivan Patiño
+          <span class="text-[--color-violet-one]">&#95;</span>
+        </a>
+
+        <div 
+        class="nav_links absolute flex justify-center right-0 gap-x-10 w-full h-full items-center"
+        > <a href="#about" data-nav-checkbox>About</a>
+          <a href="#projects" data-nav-checkbox>Projects</a>
+          <a href="#contact" data-nav-checkbox>Contact</a>
+        </div>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-<script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      const checkbox = document.getElementById("nav_checkbox");
-      const links = document.querySelectorAll(".nav_menu [data-nav-checkbox]");
-  
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          checkbox.checked = false;
-        });
-      });
-    });
-  </script>
-  <style>
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      background: var(--nav-bg-color);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      height: var(--nav-height);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(var(--border-button-color-rgb), 0.1);
-    }
-  
-    .menu-container {
-      position: relative;
-      height: var(--nav-height);
-      width: 100%;
-    }
-    .menu_wrap {
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      width: 100%;
-      height: var(--nav-height);
-      z-index: 5;
-    }
-    .nav_menu {
-      display: flex;
-      width: 90%;
-      max-width: 1200px;
-      justify-content: space-between;
-      align-items: center;
-      height: var(--nav-height);
-      font-size: var(--font-size-nav);
-      text-wrap: nowrap;
-  
-      /* Disable text selection */
-      -webkit-user-select: none; /* Safari */
-      -ms-user-select: none; /* IE 10 and IE 11 */
-      user-select: none; /* Standard syntax */
-    }
-    
-    .nav_links {
-      position: relative;
-      margin-left: auto;
-    }
-    .nav_toggle {
-      display: none;
-    }
-  
-    .toogles {
-      margin-left: 1.5rem;
-    }
-  
-    .logo {
-      font-size: var(--font-size-logo-nav);
-    }
-  
-    /* Mobile view */
-    @media only screen and (max-width: 1000px) {
-      svg {
-        width: 1.5rem;
-        cursor: pointer;
-      }
-  
-      .button_menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: fit-content;
-        z-index: 10;
-      }
-      .button_wrap {
-        display: flex;
-        place-items: center;
-        height: var(--nav-height);
-      }
-      #nav_checkbox {
-        display: none;
-      }
-  
-      .nav_toggle {
-        position: absolute;
-        font-size: 0;
-        display: flex;
-        right: 5%;
-        height: fit-content;
-        z-index: 6;
-        opacity: 0.65;
-      }
-      .nav_toggle:hover {
-        opacity: 0.85;
-      }
-  
-      .close {
-        display: none;
-      }
-      .toogles {
-        display: none;
-      }
-      #nav_checkbox:checked ~ label .open {
-        display: none;
-      }
-      #nav_checkbox:checked ~ label .close {
-        display: block;
-      }
-      .nav_links {
-        position: absolute;
-        height: 0;
-        top: 100%;
-        right: 0;
-        left: 0;
-        width: 100%;
-        gap: 1.5rem;
-        flex-direction: column;
-        background-color: var(--bg-color);
-        overflow: hidden;
-        margin-left: 0;
-  
-        opacity: 0.4;
-        transition: 0.3s ease;
-        transition-property: height, opacity, padding-bottom;
-      }
-  
-      #nav_checkbox:checked ~ .menu_wrap .nav_links {
-        height: calc(var(--nav-height) * 4);
-        padding-bottom: calc(var(--nav-height) / 1.5);
-        border-bottom: 0.2px solid var(--border-button-color);
-        opacity: 1;
-      }
-  
-      header:has(#nav_checkbox:checked) {
-        background-color: var(--bg-color);
-        border: none;
-      }
-  
-      .nav_links a {
-        opacity: 0;
-        transition: 0.4s ease;
-        transition-property: opacity;
-      }
-  
-      #nav_checkbox:checked ~ .menu_wrap .nav_links a {
-        opacity: 1;
-      }
-  
-      .toogles {
-        position: relative;
-        margin: 0;
-        display: none;
-        flex-direction: row;
-        justify-content: center;
-        height: fit-content;
-        width: 100%;
-        gap: 1rem;
-        padding: 1rem 0;
-        transition: 0.4s ease;
-      }
-  
-      #nav_checkbox:checked ~ .menu_wrap .toogles {
-        display: flex;
-      }
-    }
-  </style>
-  
+
+
+
+

@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+:root {
+    color-scheme: light dark;
+    --nav-height: 80px;
+    --font-size-nav: 1rem;
+    --font-size-logo-nav: 1.2rem;
+}
+
+html {
+    font-family: 'Anybody Variable', system-ui;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 1000;
+    background: var(--nav-bg-color);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu_wrap {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: var(--nav-height);
+    z-index: 5;
+}
+
+.menu-container {
+    position: relative;
+    height: var(--nav-height);
+    width: 100%;
+}
+
+.nav_menu {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+    font-size: var(--font-size-nav);
+    text-wrap: nowrap;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.nav_toggle {
+    display: none;
+}
+
+.toogles {
+    right: 5%;
+}
+
+.logo {
+    font-size: var(--font-size-logo-nav);
+}
