@@ -1,11 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import AboutMe from "@/components/AboutMe.astro"
-import TittleSection from "@/components/TittleSection.astro"
+
 import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
 import Contact from "@/components/Contact.astro"
+import Header from "@/components/header/Header.astro"
+import Section from "@/components/Section.astro"
+import Home from "@/components/home/Home.astro"
+import Footer from "@/components/Footer.astro"
 
 
 ---
@@ -13,26 +15,22 @@ import Contact from "@/components/Contact.astro"
   title="Portfolio de Iván Patiño - Desarrollador y Programador Web Full Stack"
   description="Soy un desarrollador web full stack con experiencia en la creación de aplicaciones web modernas y escalables. Me apasiona aprender nuevas tecnologías y mejorar mis habilidades constantemente."
 >
-  <main class="px-4">
-  <sectionContainer class="py-16 md:pb-36">
-	<Hero />
-  </slot>
-  </sectionContainer>
- <div class="space-y-16 md:space-y-36">
-	<SectionContainer class="py-16 md:pb-36">
-	  <TittleSection>Sobre mí</TittleSection>
-	  <AboutMe />
-	</SectionContainer>
+<Header />
+<main class="flex flex-col gap-10">
+	<Home />
+	<Section>
+		<AboutMe />
+	</Section>
 
-	<SectionContainer class="py-16 md:pb-36">
-	  <TittleSection>Experiencia</TittleSection>
-	  <Contact />
-	</SectionContainer>
-
-	<SectionContainer class="py-16 md:pb-36">
-	  <TittleSection>Proyectos</TittleSection>
-	  <Projects />
-	</SectionContainer>
-</div>
-  </main>
+	<Section>
+		<Projects />
+	</Section>
+	<Section>
+		<Contact />
+	</Section>
+	<Footer />
+</main>
 </Layout>
+
+
+

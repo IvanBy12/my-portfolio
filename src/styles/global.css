@@ -5,6 +5,20 @@
     --nav-height: 80px;
     --font-size-nav: 1rem;
     --font-size-logo-nav: 1.2rem;
+    
+    /* Variables para el componente Orbit */
+    --portfolio-width: 1000px;
+    --font-size-name-title: 4rem;
+    --font-size-name-subtitle: 2rem;
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --secondary-border-color: rgba(139, 92, 246, 0.3);
+    --color-lilac-one: #a78bfa;
+    --color-violet-one: #8b5cf6;
+    --color-violet-two: #7c3aed;
+    --icon-color: #ffffff;
+    --name-color :#FFA500
+
 }
 
 html {
