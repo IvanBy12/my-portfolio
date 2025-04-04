@@ -1,11 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import AboutMe from "@/components/AboutMe.astro"
-import Experience from "@/components/Experience.astro"
+import TittleSection from "@/components/TittleSection.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
-import TitleSection from "@/components/TittleSection.astro"
+import Contact from "@/components/Contact.astro"
+
 
 ---
 <Layout
@@ -19,17 +20,17 @@ import TitleSection from "@/components/TittleSection.astro"
   </sectionContainer>
  <div class="space-y-16 md:space-y-36">
 	<SectionContainer class="py-16 md:pb-36">
-	  <TitleSection>Sobre mí</TitleSection>
+	  <TittleSection>Sobre mí</TittleSection>
 	  <AboutMe />
 	</SectionContainer>
 
 	<SectionContainer class="py-16 md:pb-36">
-	  <TitleSection>Experiencia</TitleSection>
-	  <Experience />
+	  <TittleSection>Experiencia</TittleSection>
+	  <Contact />
 	</SectionContainer>
 
 	<SectionContainer class="py-16 md:pb-36">
-	  <TitleSection>Proyectos</TitleSection>
+	  <TittleSection>Proyectos</TittleSection>
 	  <Projects />
 	</SectionContainer>
 </div>
