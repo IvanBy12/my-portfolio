@@ -1,30 +1,72 @@
+---
+import Avatar from "./Avatar.astro";
+---
+
 <div id="AboutMe"></div>
 
-<article class="flex flex-col gap-10 " >
+<article class="flex flex-col gap-10 font-bold leading-light " >
 <div title="AboutMe">
 
-</div>
-<div class="flex justify-center items-center w-90 h-90 ">
-    <img src="/src/components/aboutMe/Images/Avatar.png" alt="aboutMe" />
-</div>
-
-        <div class="space-y-6 text-lg">
-            <p class="leading-relaxed">
-                ¡Hola! Soy un desarrollador web apasionado por crear experiencias digitales limpias, funcionales y visualmente atractivas. 
-                Me encanta combinar diseño y código para construir aplicaciones modernas, dinámicas y bien estructuradas.
-            </p>
+    <div class="text-center py-10">
+        <h1 class="text-4xl font-bold">About Me</h1>
+    </div>
+    <div class="flex gap-x-5">
+        <div class="content-avatar flex items-center w-auto pt-6">
+            <!--  Avatar  -->
+            <Avatar />
+        </div>
+        <div class="flex flex-col gap-5 w-full justify-center flex-1">
+            <div class="flex about-content gap-5">
+                <div class="text-wrap flex flex-col gap-y-2">
+                 
+                    <div class="space-y-6 text-lg">
+                        <p class="leading-relaxed">
+                            ¡Hola! Soy un desarrollador web apasionado por crear experiencias digitales limpias, funcionales y visualmente atractivas. 
+                            Me encanta combinar diseño y código para construir aplicaciones modernas, dinámicas y bien estructuradas.
+                        </p>
             
-            <p class="leading-relaxed">
-                Disfruto trabajar tanto en el frontend como en el backend, y siempre estoy buscando mejorar mis habilidades, aprender nuevas tecnologías y asumir nuevos retos. 
-                Actualmente, desarrollo proyectos que integran diseño responsivo, componentes reutilizables y dashboards interactivos.
-            </p>
+                        <p class="leading-relaxed">
+                            Disfruto trabajar tanto en el frontend como en el backend, y siempre estoy buscando mejorar mis habilidades, aprender nuevas tecnologías y asumir nuevos retos. 
+                            Actualmente, desarrollo proyectos que integran diseño responsivo, componentes reutilizables y dashboards interactivos.
+                        </p>
             
-            <p class="leading-relaxed">
-                Además de programar, valoro el detalle, la organización y el trabajo bien hecho. 
-                Estoy convencido de que la tecnología no solo debe funcionar bien, sino también verse bien y sentirse intuitiva.
-            </p>
-        </div>   
+                        <p class="leading-relaxed">
+                            Además de programar, valoro el detalle, la organización y el trabajo bien hecho. 
+                            Estoy convencido de que la tecnología no solo debe funcionar bien, sino también verse bien y sentirse intuitiva.
+                        </p>
+                    </div>
 
-</div>
+                </div>
+                <!--  Avatar Mobile -->
+                <div class="content-avatar-mobile justify-center">
+                    <Avatar />
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+
 
 </article>
+
+
+
+<style>
+    .content-avatar-mobile {
+        display: none;
+    }
+    @media (width <= 1250px) {
+        .content-avatar {
+            display: none;
+        }
+        .content-avatar-mobile {
+            display: flex;
+        }
+        .about-content {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+    }
+</style>
