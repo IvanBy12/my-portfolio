@@ -11,8 +11,9 @@ import { Image } from "astro:assets";
         <Image
             src={avatar}
             alt="Foto Ivan Patiño"
+            title="Foto Ivan Patiño"
             width={300}
-            class="rounded-xl w-24 h-24 object-cover"
+            class="avatar bg-[--secondary-bg-color] rounded-[--nested-radius]"
         />
     </div>
     <DownloadButton />
@@ -21,9 +22,11 @@ import { Image } from "astro:assets";
 
 
 <style>
+         
     .avatar-inside {
         --nested-radius: calc(0.75rem - 0.25rem);
     }
+
 
     .content-avatar {
         display: flex;
