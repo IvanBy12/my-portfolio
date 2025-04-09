@@ -17,23 +17,26 @@ import Avatar from "./Avatar.astro";
         </div>
         <div class="flex flex-col gap-5 w-full justify-center flex-1">
             <div class="flex about-content gap-5">
-               <b></b> <div class="text-wrap flex flex-col gap-y-2">
+               <div class="text-wrap flex flex-col gap-y-2 max-w-3x1">
              
-                    <div class="space-y-6 text-lg">
+                    <div class= "flex flex-col gap-2 basis-3/4" >
                         <p class="leading-relaxed">
                             ¡Hola! Soy un desarrollador web apasionado por crear experiencias digitales limpias, funcionales y visualmente atractivas. 
                             Me encanta combinar diseño y código para construir aplicaciones modernas, dinámicas y bien estructuradas.
                         </p>
+                        <br>
             
                         <p class="leading-relaxed">
                             Disfruto trabajar tanto en el frontend como en el backend, y siempre estoy buscando mejorar mis habilidades, aprender nuevas tecnologías y asumir nuevos retos. 
                             Actualmente, desarrollo proyectos que integran diseño responsivo, componentes reutilizables y dashboards interactivos.
                         </p>
-            
+                        <br>
+                        
                         <p class="leading-relaxed">
                             Además de programar, valoro el detalle, la organización y el trabajo bien hecho. 
                             Estoy convencido de que la tecnología no solo debe funcionar bien, sino también verse bien y sentirse intuitiva.
                         </p>
+                        <br>
                     </div>
 
                 </div>
@@ -69,27 +72,5 @@ import Avatar from "./Avatar.astro";
             gap: 1rem;
         }
     }
-     b {
-        color: var(--color-violet-one);
-        position: relative;
-    }
-
-    b:hover::after {
-        position: absolute;
-        content: "💻";
-        left: calc(0px - var(--font-size-paragraph));
-        z-index: 0;
-        animation:
-            slide-up-right 0.3s ease-in-out forwards,
-            float 5s ease-in-out infinite;
-    }
-    b:hover::before {
-        position: absolute;
-        content: "🧠";
-        right: calc(0px - var(--font-size-paragraph));
-        z-index: 0;
-        animation:
-            slide-up-left 0.3s ease-in-out forwards,
-            float 5s ease-in-out infinite;
-    }
+    
 </style>
