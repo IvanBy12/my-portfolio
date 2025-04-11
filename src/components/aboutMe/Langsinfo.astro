@@ -1,0 +1,33 @@
+---
+import ReactLogo from "@/components/home/orbit/icons/ReactLogo.astro";
+import JavaLogo from "@/components/home/orbit/icons/JavaIcon.astro";
+import AstroLogo from "@/components/home/orbit/icons/AstroIcon.astro";
+import PythonLogo from "@/components/home/orbit/icons/Python.astro";
+import TypescriptLogo from "@/components/home/orbit/icons/Typescript.astro";
+import Badge from "@/components/Badge.astro";
+---
+
+<article class="flex flex-col gap-8 relative" {...Astro.props}>
+    <h2 class="font-bold text-[--primary-color]">
+        <span class="text-white">About_me</span> Lenguajes and frameworks
+        <slot />
+    </h2>
+
+    <div
+        class="langs flex flex-row gap-y-5 gap-x-5 flex-wrap justify-center items-center"
+    >
+        <a href="https://es.react.dev/" class="lang" rel="nofollow"></a>
+        <ReactLogo class="text-red-800 dark:text-red-300" />
+        <Badge>React</Badge>
+
+        <a href="https://www.java.com/es/" class="lang" rel="nofollow"></a>
+        <JavaLogo class="text-red-800 dark:text-red-300" />
+        <Badge>Java</Badge>
+    </div>
+</article>
+
+<style>
+    h2 {
+        font-size: var(--font-size-subtitle-section);
+    }
+</style>
