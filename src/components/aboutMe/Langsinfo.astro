@@ -48,5 +48,30 @@ import Badge from "@/components/Badge.astro";
 <style>
     h2 {
         font-size: var(--font-size-subtitle-section);
+        min-width: 100%;
+        gap: 2.0rem;
+        text-align:left;
+        margin-bottom: 2.0rem;
     }
+
+    .lang {
+    display: flex;
+    flex-direction: column;
+    min-width: 90px;
+    width: 10%;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+  }
+
+  .lang:hover {
+    scale: 0.8;
+  }
+
+  .lang svg {
+    align-self: center;
+    width: 30%;
+  }
 </style>
