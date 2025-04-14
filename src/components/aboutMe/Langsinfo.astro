@@ -1,8 +1,4 @@
 ---
-import ReactLogo from "@/components/home/orbit/icons/ReactLogo.astro";
-import JavaLogo from "@/components/home/orbit/icons/JavaIcon.astro";
-import PythonLogo from "@/components/home/orbit/icons/Python.astro";
-import TypescriptLogo from "@/components/home/orbit/icons/Typescript.astro";
 import Badge from "@/components/Badge.astro";
 import AstroIcon from "@/components/aboutMe/Icons/AstroIcon.astro";
 import TypescriptIcon from "@/components/aboutMe/Icons/TypescriptIcon.astro";
@@ -14,7 +10,7 @@ import ReactIcon from "@/components/aboutMe/Icons/ReactIcon.astro";
 <article class="flex flex-col gap-8 relative" {...Astro.props}>
 
     <h2 class="font-bold text-[--primary-color]">
-        <span class="text-white">Lenguajes and frameworks</span> 
+        <span class="text-white font-bold text-[1.3rem]">Lenguajes and frameworks</span> 
         <slot />
     </h2>
 
@@ -73,6 +69,14 @@ import ReactIcon from "@/components/aboutMe/Icons/ReactIcon.astro";
     transition: all 0.3s ease-in-out;
     margin: auto;
   }
+
+  .font-bold {
+   
+    margin-left: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
 
   .lang:hover {
     scale: 0.8;
