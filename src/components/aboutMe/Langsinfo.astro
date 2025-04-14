@@ -1,10 +1,11 @@
 ---
 import ReactLogo from "@/components/home/orbit/icons/ReactLogo.astro";
 import JavaLogo from "@/components/home/orbit/icons/JavaIcon.astro";
-import AstroLogo from "@/components/home/orbit/icons/AstroIcon.astro";
 import PythonLogo from "@/components/home/orbit/icons/Python.astro";
 import TypescriptLogo from "@/components/home/orbit/icons/Typescript.astro";
 import Badge from "@/components/Badge.astro";
+import AstroIcon from "@/components/aboutMe/Icons/AstroIcon.astro";
+import TypescriptIcon from "@/components/aboutMe/Icons/TypescriptIcon.astro";
 ---
 
 <article class="flex flex-col gap-8 relative" {...Astro.props}>
@@ -33,16 +34,20 @@ import Badge from "@/components/Badge.astro";
             <Badge>Python</Badge>
         </a>
 
-        <a href="https://www.typescriptlang.org/" class="lang" rel="nofollow">
-            <TypescriptLogo class="text-red-800 dark:text-red-300" />
-            <Badge>Typescript</Badge>
-        </a>
+        <a
+        class="lang"
+        rel="nofollow"
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+      >
+        <TypescriptIcon class="text-blue-800 dark:text-blue-300" />
+        <Badge class="bg-blue-300 text-white">Typescript</Badge>
+      </a>
 
-        <a href="https://www.astro.build/" class="lang" rel="nofollow">
-            <AstroLogo class="text-red-800 dark:text-red-300" />
-            <Badge>Astro</Badge>
-        </a>
-    </div>
+        <a class="lang" rel="nofollow" href="https://astro.build/" target="_blank">
+            <AstroIcon class="text-pink-800 dark:text-pink-300" />
+            <Badge class="bg-pink-300 text-white">Astro</Badge>
+          </a>
 </article>
 
 <style>
