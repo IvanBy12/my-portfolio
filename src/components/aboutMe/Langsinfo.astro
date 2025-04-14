@@ -6,6 +6,9 @@ import TypescriptLogo from "@/components/home/orbit/icons/Typescript.astro";
 import Badge from "@/components/Badge.astro";
 import AstroIcon from "@/components/aboutMe/Icons/AstroIcon.astro";
 import TypescriptIcon from "@/components/aboutMe/Icons/TypescriptIcon.astro";
+import PythonIcon from "@/components/aboutMe/Icons/PythonIcon.astro";
+import JavaIcon from "@/components/aboutMe/Icons/JavaIcon.astro";
+import ReactIcon from "@/components/aboutMe/Icons/ReactIcon.astro";
 ---
 
 <article class="flex flex-col gap-8 relative" {...Astro.props}>
@@ -19,19 +22,19 @@ import TypescriptIcon from "@/components/aboutMe/Icons/TypescriptIcon.astro";
         class="langs flex flex-row gap-y-5 gap-x-5 flex-wrap justify-center items-center"
     >
         <a href="https://es.react.dev/" class="lang" rel="nofollow">
-            <ReactLogo class="text-red-800 dark:text-red-300" />
-            <Badge>React</Badge>
+            <ReactIcon class="text-red-800 dark:text-red-300" />
+            <Badge class="bg-blue-300 text-white">React</Badge>
         </a>
     
 
         <a href="https://www.java.com/es/" class="lang" rel="nofollow">
-            <JavaLogo class="text-red-800 dark:text-red-300" />
-            <Badge>Java</Badge>
+            <JavaIcon class="text-red-800 dark:text-red-300" />
+            <Badge class="bg-red-500 text-white">Java</Badge>
         </a>
         
         <a href="https://www.python.org/" class="lang" rel="nofollow">
-            <PythonLogo class="text-red-800 dark:text-red-300" />
-            <Badge>Python</Badge>
+            <PythonIcon class="text-red-800 dark:text-red-300" />
+            <Badge class=" bg-yellow-300 text-white " >Python</Badge>
         </a>
 
         <a
