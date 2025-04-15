@@ -1,0 +1,37 @@
+---
+    
+import CardProject from "./CardProject.astro";
+import type {CardProjectModel} from "./CardProjectModel";
+import GrayBadge from "../badges/GrayBadge.astro";
+
+
+const data: CardProjectModel[] = [
+   
+];
+
+const techs = [...new Set(data.flatMap((project) => project.techs))]
+    .filter((t) => t !== undefined)
+    .map((tech) => {
+        return {
+            id: tech,
+            total: data.filter((project) =>
+                project.techs && tech ? project.techs.includes(tech) : 0
+            ).length,
+        };
+    });
+
+
+---
+<div id="projects"></div>
+
+<article class="flex flex-col gap-10 font-bold leading-light " >
+    <div title="Projects">
+        <h1 class="text-4xl text-center">My Projects</h1>
+        <div class="flex flex-col gap-10">
+            <div class="flex flex-col gap-10">
+                <h2 class="text-2xl font-bold ">Project 1</h2>
+            </div>
+        </div>
+    </div>
+
+</article>
