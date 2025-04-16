@@ -40,11 +40,17 @@ import { ViewTransitions } from "astro:transitions";
 }
 
 
-
 .menu_wrap{
  display: flex;
  justify-content: center;
- 
+ z-index: 5;
+}
+
+
+.nav_menu{
+  transition: all 0.3s ease-in-out;
+  -webkit-user-select: none; 
+    user-select: none; 
 }
 
 
